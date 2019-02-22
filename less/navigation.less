@@ -1,1 +1,67 @@
 // Navigation Styles here
+
+header.main-header {
+    // .Flex(center, normal, row);
+    border-bottom: 2px dashed @navigation-border;
+    padding: 0 5%;
+}
+
+header.main-header div.inner {
+    .Flex(space-between, center, row);
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: @normalFontSize;
+}
+
+@media @mobile {
+    header.main-header div.inner {
+        .Flex(space-between, center, column);
+        flex-wrap: wrap;
+        max-width: 500px;
+    }
+}
+
+header.main-header div.inner h1 {
+    font-size: @h1FontSize;
+    width: 45%;
+}
+
+@media @mobile {
+    header.main-header div.inner h1 {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+header.main-header div.inner nav {
+    .Flex(flex-end, center, row);
+    width: 45%;
+}
+@media @mobile {
+    header.main-header div.inner nav {
+        width: 100%;
+    }
+}
+
+@media(min-width: 800px) {
+    header.main-header div.inner nav a:hover {
+        color: white;
+        background: black;
+    }
+}
+
+header.main-header div.inner nav a {
+    color: black;
+    text-decoration: none;
+    .Pad(40px, 0, 40px, 0);
+    width: 25%;
+    text-align: center;
+}
+
+@media @mobile {
+    header.main-header div.inner nav a {
+        width: 100%;
+        .Pad(20px, 0, 20px, 0);
+    }
+}
